@@ -24,6 +24,12 @@ async function run() {
           'Accept': 'application/vnd.github.v3+json'
         }
       });
+
+      const description = response.data.description;
+
+      console.log(`Description of the repo: ${description}`);
+  
+      core.setOutput('description', description);
   
       core.setOutput('metadata', JSON.stringify(response.data));
   
