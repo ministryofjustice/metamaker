@@ -1,7 +1,7 @@
 name: "MetaMaker"
 description: "A GitHub Action to automatically generate metadata for a specific repository."
 inputs:
-  repository:
+  repo-name:
     description: "The name of the repository to gather the metadata for."
     required: true
   github-token:
