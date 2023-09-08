@@ -1,14 +1,14 @@
-name: 'MetaMaker'
-description: 'A GitHub Action to automatically generate metadata for a specific repository.'
+name: "MetaMaker"
+description: "A GitHub Action to automatically generate metadata for a specific repository."
 inputs:
   repository:
-    description: 'The name of the repository to gather the metadata for.'
+    description: "The name of the repository to gather the metadata for."
     required: true
   github-token:
-    description: 'The GitHub token used to authenticate with the GitHub API'
+    description: "The GitHub token used to authenticate with the GitHub API"
 outputs:
   metadata:
-    description: 'The built metadata object.'
+    description: "The built metadata object."
 runs:
-  using: 'node16'
-  main: 'metamaker.js'
+  using: "node16"
+  main: "metamaker.js"
