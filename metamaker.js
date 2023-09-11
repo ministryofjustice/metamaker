@@ -5,7 +5,7 @@ const axios = require('axios');
 async function run() {
     try {
       const repoName = core.getInput('repo-name');
-      console.log(`Repository to check: ${repoName}!`);
+      console.log(`Repository to check: ${repoName}`);
 
       const token = core.getInput('github-token');
   
@@ -32,7 +32,7 @@ async function run() {
         topics: response.data.topics
       };
 
-      console.log(data);
+      console.log(JSON.stringify(data));
   
       core.setOutput('repository_info', JSON.stringify(data));  
     
