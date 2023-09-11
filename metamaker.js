@@ -25,13 +25,18 @@ async function run() {
         }
       });
 
-      const description = response.data.description;
+      const data = {
+        name: response.data.name,
+        full_name: response.data.full_name,
+        description: response.data.description,
+        topics: response.data.topics
+      };
 
-      console.log(`Description of the repo: ${description}`);
+      console.log(data);
   
-      core.setOutput('description', description);
+      core.setOutput('repository_info', JSON.stringify(data));  
   
-      core.setOutput('metadata', JSON.stringify(response.data));
+      // core.setOutput('metadata', JSON.stringify(response.data));
   
     } catch (error) {
       core.setFailed(error.message);
