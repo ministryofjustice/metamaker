@@ -35,9 +35,7 @@ async function run() {
       console.log(data);
   
       core.setOutput('repository_info', JSON.stringify(data));  
-  
-      // core.setOutput('metadata', JSON.stringify(response.data));
-  
+    
     } catch (error) {
       core.setFailed(error.message);
     }
